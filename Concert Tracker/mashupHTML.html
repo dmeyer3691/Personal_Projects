@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--mashup-->
+<html lang="en">
+	<head>
+		<title>MiniMashUp</title>
+		<meta charset="utf-8" />
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="mashupCSS.css">
+		<script type="text/javascript" src="mashupJS2.js" ></script>
+		<!--apis-->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="lastfm.api.js"></script>
+		<script src="lastfm.api.md5.js"></script>
+	</head>
+	<body onload="initialize()">
+		<!--User input-->
+		<div id="panel">
+			<p>Please enter a musical artist to track:</p>
+			<input id="artist" type="textbox" onkeyup="if(event.keyCode == 13) { doStuff();}"/>
+			<input type="button" value="Submit" onclick="doStuff()" />
+		</div>
+		<!--Map-->
+		<div id="map-canvas"><div/>
+	</body>
+</html>

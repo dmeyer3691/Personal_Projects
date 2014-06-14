@@ -1,0 +1,35 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "bootstrap";
+
+body {
+  padding-top: 65px;
+  padding-bottom: 40px;
+  background: #A3C2FF;
+  position: relative;
+}
+a:link{color:#FFFFFF;}
+a:visited{color:#933E93;}
+
+.affix {
+	width: inherit; //helped keep the content the same size on fluid layouts
+	position: fixed;
+	top: 50px;		//height of the nav
+	right: 10px;
+}
+
+td {
+	font-size: 14px;
+}

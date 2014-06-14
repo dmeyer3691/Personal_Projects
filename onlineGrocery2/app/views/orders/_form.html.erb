@@ -1,0 +1,40 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, size: 40%>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address, rows: 3, cols: 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, size: 40 %>
+  </div>
+  <div class="field">
+  <div class="input-group"
+    <%= f.label :pay_type %><br>
+    <%= f.select :pay_type, Order::PAYMENT_TYPES, {:prompt=>"Select a payment method"},{:class=>"form-control"} %>
+  </div>
+  </div>
+    <div class="field">
+    <%= f.label :projected_pick_up_time %><br>
+    <%= f.datetime_select :projected_pick_up_time, :default => Time.now + 1.hour, :ampm => true, :minute_step => 15 %>
+  </div>
+<br/>
+  <div class="actions">
+    <%= f.submit 'Place Order', :class=>"btn btn-default" %>
+  </div>
+<% end %>

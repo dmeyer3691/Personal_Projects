@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Mike Dunston
+  address: testAddy
+  email: dano@email.org
+  pay_type: Cash
+  projected_pick_up_time: 2001-02-03T05:30:00+00:00 
+  time_received: 2001-02-03T06:30:00+00:00
+
+two:
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString

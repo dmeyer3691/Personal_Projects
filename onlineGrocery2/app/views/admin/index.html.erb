@@ -1,0 +1,6 @@
+<h1>Welcome</h1>
+<% t = Time.now %>
+<%= t.strftime("%A") %> <br>
+<%= t.strftime("%B %d, %Y") %> <br>
+<%= t.strftime("%I:%M %p") %> <br>
+<h4>We have received <%= pluralize(@total_orders, "order") %></h4>

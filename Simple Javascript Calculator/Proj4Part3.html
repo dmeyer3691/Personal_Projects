@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Tic Tac Toe -->
+<html lang="en">
+	<head>
+		<title>Tic Tac Toe</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="Proj4Part3.css">
+		<script type="text/javascript" src="Proj4Part3.js" ></script>
+	</head>
+	<body>
+		<h1>Let's Play Tic Tac Toe</h1>
+		<button class="opponent" id="999" onclick="changeOpponent()" >Opponent: Human</button>
+		<br/>
+		<input type="button" onclick="reset()" value="Reset"/>
+		<!-- Tic Tac Toe Play Field -->
+		<table>
+			<tr>
+				<td>
+					<button class="Tile" id="11" onclick="changeState(11)"> </button>
+				</td>
+				<td>
+					<button class="Tile" id="12" onclick="changeState(12)"> </button>
+				</td>
+				<td>
+					<button class="Tile" id="13" onclick="changeState(13)"> </button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="Tile" id="21" onclick="changeState(21)"> </button>
+				</td>
+				<td>
+					<button class="Tile" id="22" onclick="changeState(22)"> </button>
+				</td>
+				<td>
+					<button class="Tile" id="23" onclick="changeState(23)"> </button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="Tile" id="31" onclick="changeState(31)"> </button>
+				</td>
+				<td>
+					<button class="Tile" id="32" onclick="changeState(32)"> </button>
+				</td>
+				<td>
+					<button class="Tile" id="33" onclick="changeState(33)"> </button>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+table,td {border-style:solid; border-collapse:collapse;}
+table {margin:50px;}
+td {height:50px; width:50px; padding:0px;}
+button.Tile {height:50px; width:50px;}
+input {margin:0px 105px;}
+button.opponent{margin:10px 55px; width:150px;}

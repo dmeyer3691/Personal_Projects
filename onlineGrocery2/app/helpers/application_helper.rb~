@@ -1,0 +1,9 @@
+module ApplicationHelper
+  def hidden_div_if(condition, attributes = {}, &block)
+    if condition
+      attributes["style"]= "display: none, padding-top: 40px"
+      attributes["class"]= "navbar navbar-default navbar-fixed-bottom"
+    end
+    content_tag("nav", attributes, &block)
+  end
+end

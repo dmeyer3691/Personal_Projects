@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong>Payment type:</strong>
+  <%= @order.pay_type %>
+</p>
+
+<p>
+  <strong>Order Contents:</strong>
+  <table>
+  <% @order.line_items.each do |item| %>
+  <tr>
+    <td><%= item.quantity %>&times;</td>
+    <td><%= item.product.title %></td>
+    <td><%= number_to_currency(item.total_price) %></td>
+  </tr>
+  <% end %>
+  <tr class = "total_line">
+    <td colspan="2">Total</td>
+    <td class = "total_cell"><%= number_to_currency(@order.total_price) %></td>
+  </tr>
+  </table>
+</p>
+<br>
+<br>
+<p>
+  <strong>Projected Pick-Up Time:</strong>
+  <% prj = @order.projected_pick_up_time %>
+  <%= prj.strftime("%m/%d/%Y %I:%M %p") %>
+<br>
+<br>
+<p>
+  <strong>Picked Up?:</strong>
+  <%= best_in_place @order, :picked_up, :type => :checkbox, :collection => [raw("<span class=\"glyphicon glyphicon-unchecked\"></span>"), raw("<span class=\"glyphicon glyphicon-check\"></span>")] %>
+    <br>
+    <strong>Pick Up Time:</strong>
+    <% if @order.picked_up then
+       pt = @order.time_picked_up
+    end %>
+    <%= if pt then pt.strftime("%m/%d/%Y %I:%M %p") end%>
+</p>
+<%= link_to 'Edit', edit_order_path(@order) %>
+<%= link_to 'Back', orders_path %>

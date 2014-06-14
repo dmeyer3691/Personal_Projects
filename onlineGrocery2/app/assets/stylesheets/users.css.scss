@@ -1,0 +1,18 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.list_line_even{
+ background: #A3C2FF;
+ }
+ .list_line_odd{
+ background: #C8DAFF;
+ }
+table{
+  border-collapse: collapse;
+ }
+ table tr td{
+  font-size: 12px;
+  text-wrap: normal;
+  padding: 10px;
+  vertical-align: top;
+ }
